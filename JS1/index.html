@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<!-- 웹개발 종합반의 스파르타피디아 파일을 기본 골격으로 작성하였습니다. -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>내배캠 최고 평점 영화 컬렉션</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        .mytitle {
+            width: 100%;
+            height: 250px;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://50plus.or.kr/upload/im/2019/05/9991302b-c60c-4e40-9625-b31910bdfa6e.png');
+            background-position: center;
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mycomment {
+            color: gray;
+        }
+
+        .mycards {
+            margin: 20px auto 0px auto;
+            width: 95%;
+            max-width: 1200px;
+        }
+
+        .mypost {
+            width: 95%;
+            max-width: 500px;
+            margin: 20px auto 0px auto;
+            padding: 20px;
+            box-shadow: 0px 0px 3px 0px gray;
+            display: block;
+        }
+
+        .mybtns {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .mybtns>button {
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+    </script>
+</head>
+
+<body>
+    <div class="mytitle">
+        <h1>내배캠 최고 평점 영화 컬렉션</h1>
+    </div>
+    <div class="mypost" id="post-box">
+
+        <!-- 검색 입력란에 해당되는 부분입니다. -->
+        <div class="form-floating mb-3">
+            <input id="url" type="text" class="form-control" placeholder="영화 제목을 검색해보세요">
+            <label for="url">영화 제목을 검색해보세요</label>
+        </div>
+
+        <!-- 검색 버튼과 닫기 버튼 -->
+        <!-- 첫번째 버튼을 클릭했을 때, searchMovies() 함수가 호출되고,
+        두번째 버튼을 클릭하면, 해당 디스플레이를 감추는 방식입니다. -->
+        <div class="mybtns">
+            <button onclick="searchMovies()" type="button" class="btn btn-dark">검색하기</button>
+            <button onclick="document.getElementById('post-box').style.display = 'none'" type="button"
+                class="btn btn-dark">닫기</button>
+        </div>
+    </div>
+
+    <!-- 영화 카드들을 담을 컨테이너 -->
+    <div class="mycards">
+        <div class="row row-cols-1 row-cols-md-4 g-4" id="cards-box">
+            <!-- 동적으로 생성되는 영화 카드들이 여기에 추가됩니다. -->
+        </div>
+    </div>
+
+    <!-- 자바스크립트 파일과의 연결부 -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
